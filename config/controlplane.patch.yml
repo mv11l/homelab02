@@ -1,0 +1,18 @@
+machine:
+  certSANs:
+    - 163.172.143.21
+  install:
+    disk: /dev/sdb
+    wipe: true
+  network:
+    interfaces:
+      - interface: eth1
+        dhcp: true
+cluster:
+  allowSchedulingOnControlPlanes: true
+  apiServer:
+    extraArgs:
+      advertise-address: "0.0.0.0"
+    certSANs:
+      - 127.0.0.1
+      - 163.172.143.21

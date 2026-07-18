@@ -25,3 +25,7 @@ variable "prefix" {
   type        = string
   description = "Prefix is used to global scope ressources"
 }
+
+variable "talos_img_path" {
+  type = string
+}
