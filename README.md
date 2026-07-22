@@ -25,6 +25,9 @@ make plan
 # Apply infrastructure and run Talos inspection
 make apply
 
+# Destroy infrastructure
+make destroy
+
 # Run Talos inspection against the provisioned instance (requires talosctl)
 make talos-inspect
 ```

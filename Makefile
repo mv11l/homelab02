@@ -11,13 +11,16 @@ endif
 
 DIR := tofu
 
-.PHONY: init plan apply talos-inspect
+.PHONY: init plan apply destroy talos-inspect
 
 init:
 	$(TF_BIN) -chdir=$(DIR) init
 
 plan:
 	$(TF_BIN) -chdir=$(DIR) plan
+
+destroy:
+	$(TF_BIN) -chdir=$(DIR) destroy -auto-approve
 
 apply:
 	$(TF_BIN) -chdir=$(DIR) apply -auto-approve

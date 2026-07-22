@@ -1,6 +1,5 @@
 machine:
   certSANs:
-    - 163.172.143.21
   install:
     disk: /dev/sdb
     wipe: true
@@ -15,4 +14,3 @@ cluster:
       advertise-address: "0.0.0.0"
     certSANs:
       - 127.0.0.1
-      - 163.172.143.21
